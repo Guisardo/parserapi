@@ -1,0 +1,7 @@
+[submodule "test-widgets"]
+	path = test-widgets
+	url = https://github.com/Guisardo/test-widgets.git
+	branch = master
+[submodule "logstash-custom-puller"]
+	path = logstash-custom-puller
+	url = https://github.com/Guisardo/logstash-custom-puller.git
