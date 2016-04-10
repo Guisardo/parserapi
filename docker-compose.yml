@@ -26,3 +26,14 @@ logstash:
   volumes:
    - ./config/logstash:/etc/logstash
   command: "logstash -f /etc/logstash"
+
+puller:
+  build: logstash-custom-puller
+  restart: always
+  links:
+   - logstash:logstash
+  environment:
+   SRV_PREFIX: 'http://datafactory.foxites.com/'
+   SRV_FILTER: 'mam'
+   SRV_FOLDER: 'foxsports-la/xml'
+   DEST_PATH: 'df/mam'
